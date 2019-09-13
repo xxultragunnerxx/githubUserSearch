@@ -34,8 +34,7 @@ const displayResults = (responseJson) => {
     $('.search-results').empty();
   responseJson.forEach((repoObj) => {
     $('.search-results').append(`
-          <div>${repoObj.name}</div>  
-          <div>${repoObj.html_url}</div>
+          <li><a href="${repoObj.html_url}">${repoObj.name}</a></li>
        `)
   })
 
